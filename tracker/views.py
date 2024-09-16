@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import *
 from django.db.models import Sum
+from django.contrib import messages
 # Create your views here.
 def index(request):
     if request.method == "POST":
@@ -13,6 +14,10 @@ def index(request):
             expense_type = 'DEBIT'
         else:
             expense_type = 'CREDIT'
+
+        if float(amount) == 0:
+            messages.success(request, "Amount cannot be Zero")
+            return redirect('/')
 
         tracking_history = TrackingHistory.objects.create(
             expense_type = expense_type,
