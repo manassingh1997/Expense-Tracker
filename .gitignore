@@ -1,1 +1,12 @@
 expenseenv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
