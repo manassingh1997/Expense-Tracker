@@ -15,3 +15,5 @@ class TrackingHistory(models.Model):
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
+    def __str__(self) -> str:
+        return f"The amount is {self.amount} for {self.description} expense type is {self.expense_type}"
