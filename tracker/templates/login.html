@@ -1,0 +1,25 @@
+{% extends "base.html"%}
+
+{% block start%}
+<div style = "margin-top:-100px !important">
+    <h3>Login Page</h3>
+  <form method="POST" id="form">
+    {% csrf_token %}
+    <div class="form-control">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter UserName..." required/>
+      <small>Username is required</small>
+    </div>
+    <div class="form-control">
+      <label for="password">Password <br />
+        </label>
+      <input  type="password" id="password" name="password" placeholder="Enter Password..." />
+    </div>
+    <p>If you don't have an account <a href="{%url 'register_'%}">Register</a></p>
+
+    <button class="btn" type="submit">Login</button>
+  </form>
+</div>
+  
+
+{% endblock %}

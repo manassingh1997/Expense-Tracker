@@ -41,11 +41,12 @@ body {
   opacity: 0.5;
 }
 
+
 .balance-container {
   display: flex;
   flex-direction: column;
 }
-
+/***************************/
 .container {
   margin: 30px auto;
   width: 350px;
@@ -211,3 +212,5 @@ input[type="number"] {
 .notification-container p {
   margin: 0;
 }
+
+
