@@ -1,5 +1,8 @@
 expenseenv/
 
+#Ignore environment variables
+environment_variables.env
+
 # Ignore Python cache files
 __pycache__/
 *.pyc
