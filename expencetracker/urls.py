@@ -22,7 +22,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('',include('tracker.urls')),
-    path('admin/', admin.site.urls),
+    path('site-admin-view/', admin.site.urls),# admin url is changed to enhance security
 ]
 
 if settings.DEBUG:
